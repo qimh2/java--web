@@ -6,7 +6,9 @@
 <struts>
 
 <!-- 主配置文件，只是配置一些常用变量 -->
-
+<constant name = "struts.i18n.encoding" value="UTF-8"></constant>
+<!-- <constant name = "struts.devMode" value="true"></constant> -->
+<constant name = "struts.configuration.xml.reload" value="true"></constant>
 <include file = "config/qimh/struts/user.xml"/>
 
 </struts>

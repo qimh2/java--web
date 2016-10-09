@@ -10,6 +10,7 @@ public class LoginAction {
 	//处理方法
 	public String execute(){
 		
+//		Integer.parseInt("ssss");
 		if("qimh".equals(username) && "123456".equals(pwd)){
 			
 			return "success";
