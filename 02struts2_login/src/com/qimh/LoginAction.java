@@ -21,6 +21,12 @@ public class LoginAction {
 	}
 	
 	
+	public String loginOut(){
+		System.out.println("loginOut.....");
+		return "success";
+	}
+	
+	
 	public String getUsername() {
 		return username;
 	}
