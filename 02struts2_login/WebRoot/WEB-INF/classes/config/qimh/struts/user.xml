@@ -66,9 +66,17 @@
 		</action>
 		
 		 <!-- name是url请求名称，不要写/ ;class对应action完全限定名=包名+类名 -->
-		<action name="add" ><!-- class="com.qimh.AddAction" method="" -->
+		<!-- <action name="add" class="com.qimh.AddAction" method="add">class="com.qimh.AddAction" method=""
+			result 是结果集  name值和对应的action中的方法的返回值匹配，默认是success
+			<result name = "success">/index.jsp</result>
+		</action>
+		<action name="update" class="com.qimh.AddAction" method="update">class="com.qimh.AddAction" method=""
+			result 是结果集  name值和对应的action中的方法的返回值匹配，默认是success
+			<result name = "success">/index.jsp</result>
+		</action> -->
+		<!-- 使用通配符来配置action  ，可以减少action的配置， *表示匹配所有，占位符{1}表示第一个*所代表的内容，{2}、{3}以此类推 -->
+		<action name="user*" class="com.qimh.AddAction" method="{1}"><!-- class="com.qimh.AddAction" method="" -->
 			<!-- result 是结果集  name值和对应的action中的方法的返回值匹配，默认是success-->
-			
 			<result name = "success">/index.jsp</result>
 		</action>
 		

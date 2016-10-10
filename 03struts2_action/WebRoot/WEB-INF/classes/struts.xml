@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+<struts>
+
+<!-- 主配置文件，只是配置一些常用变量 -->
+<constant name = "struts.i18n.encoding" value="UTF-8"></constant>
+<!-- <constant name = "struts.devMode" value="true"></constant> -->
+<constant name = "struts.configuration.xml.reload" value="true"></constant>
+
+
+
+<package name="user"  extends="struts-default">
+
+		<action name="pojo" class="com.qimh.action.PojoAction">
+			<result  name = "success">/index.jsp</result>
+		</action>
+		
+		<action name="interface" class="com.qimh.action.InterfaceAction">
+			<result  name = "success">/index.jsp</result>
+		</action>
+		<action name="extends" class="com.qimh.action.ExtendsAction">
+			<result  name = "success">/index.jsp</result>
+		</action>
+		
+</package>
+
+
+</struts>
