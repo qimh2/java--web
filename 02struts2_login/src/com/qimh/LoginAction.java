@@ -16,7 +16,7 @@ public class LoginAction {
 			return "success";
 		}else{
 			
-			return "failed";
+			return "login";
 		}
 	}
 	
