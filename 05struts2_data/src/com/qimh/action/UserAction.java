@@ -3,6 +3,7 @@ package com.qimh.action;
 import com.opensymphony.xwork2.Action;
 import com.qimh.entity.User;
 
+//ÊôÐÔÇý¶¯
 public class UserAction {
 	private User user;
 	

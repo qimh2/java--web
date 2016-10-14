@@ -12,7 +12,7 @@
 <!-- 自定义扩展名
 <constant name = "struts.action.extension" value="action,,qimh"></constant>-->
 <!-- 设置开发模式-->
-<constant name = "struts.devMode" value="true"></constant>
+<!-- <constant name = "struts.devMode" value="true"></constant> -->
 <!-- 自动加载-->
 <constant name = "struts.configuration.xml.reload" value="true"></constant>
    <!-- extends 必须写，直接或者间接继承struts-default name自定义 -->
@@ -22,6 +22,12 @@
       <!-- result 是结果集  name值和对应的action中的方法的返回值匹配，默认是success-->
       <result name = "success">/show.jsp</result>
       </action>
+      
+      <action name="regModel" method ="register" class="com.qimh.action.UserModelAction">
+      <result name = "success">/show.jsp</result>
+      </action>
+      
+      
 </package>
 
 
