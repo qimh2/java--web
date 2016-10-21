@@ -34,7 +34,7 @@ public class TestActionContextAction {
 		
 		if(sessionMap instanceof SessionMap){
 			SessionMap sm = (SessionMap) sessionMap;
-			//»√session ‘œ¬
+			//»√session ß–ß
 			sm.invalidate();
 			System.out.println("sesson  ß–ß°£°£°£°£");
 		}
