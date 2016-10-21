@@ -21,16 +21,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  
-  		<a href = "/struts2-3/testActionContextAction.action?name=qimh"> test  ActionContext </a>
-  		<br>
-  		<a href = "/struts2-3/testAwareAction.action?name=qimh"> Test Aware </a>
-  		<%
-  			    if(application.getAttribute("date") == null){
-  			    	application.setAttribute("date", new Date());
-  			    }
-  				request.setAttribute("req", "value");
-  		
-  		 %>
+  		application:${applicationScope.applicationKey2}<br>
+   		request:${requestScope.requestKey2}<br>
+   		age:${parameters.name}<br>
+   		session:${sessionScope.sessionName2}
   </body>
 </html>

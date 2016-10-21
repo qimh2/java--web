@@ -23,7 +23,9 @@
 	      <result name = "success">/test-actioncontext.jsp</result>
       </action>
       
-      
+      <action name="testAwareAction"  class="com.qimh.action.TestAwareAction">
+	      <result name = "success">/test-aware.jsp</result>
+      </action>
 </package>
 
 

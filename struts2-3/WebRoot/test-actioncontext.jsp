@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   		application:${applicationScope.applicationKey}<br>
    		request:${requestScope.requestKey}<br>
+   		session:${sessionScope.sessionName}<br>
    		age:${parameters.name}
   </body>
 </html>

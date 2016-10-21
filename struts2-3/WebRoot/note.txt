@@ -1,0 +1,3 @@
+解耦方式 ：
+
+   >选用的建议：若一个action类中有多个action方法，且多个方法都需要使用域Map对象 或parametes，则建议使用Aware接口的方式。
