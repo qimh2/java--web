@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+<!-- 配置struts2属性 -->
+<!-- 乱码解决 -->
+<constant name = "struts.i18n.encoding" value = "UTF-8"/>
+<!-- 自定义扩展名
+<constant name = "struts.action.extension" value="action,,qimh"></constant>-->
+<!-- 设置开发模式-->
+<!-- <constant name = "struts.devMode" value="true"></constant> -->
+<!-- 自动加载-->
+<constant name = "struts.configuration.xml.reload" value="true"></constant>
+   <!-- extends 必须写，直接或者间接继承struts-default name自定义 -->
+<package name="user" extends="struts-default">
+      <!-- name是请求名称，不要写/ ;class对应action完全限定名=包名+类名 -->
+      <action name="testActionContextAction"  class="com.qimh.action.TestActionContextAction">
+	      <!-- result 是结果集  name值和对应的action中的方法的返回值匹配，默认是success-->
+	      <result name = "success">/test-actioncontext.jsp</result>
+      </action>
+      
+      
+</package>
+
+
+</struts>
