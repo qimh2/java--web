@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -25,6 +25,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<a href = "/struts2-3/testActionContextAction.action?name=qimh"> test  ActionContext </a>
   		<br>
   		<a href = "/struts2-3/testAwareAction.action?name=qimh"> Test Aware </a>
+  		
+  		<br>
+  		<a href = "/struts2-3/testDynamicMethodInvocation.qimh"> 测试动态方法调用 </a>
+  		
   		<%
   			    if(application.getAttribute("date") == null){
   			    	application.setAttribute("date", new Date());

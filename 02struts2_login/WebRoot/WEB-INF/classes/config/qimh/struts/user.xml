@@ -85,6 +85,12 @@
 			<result name = "success">/error.jsp</result>
 		</action>
 		
+		
+		
+      <action name="testDynamicMethodInvocation"  class="com.qimh.action.TestDynamicMethodInvocationAction" method = "save">
+	      <result name = "success">/success.jsp</result>
+      </action>
+		
 </package>
 
 

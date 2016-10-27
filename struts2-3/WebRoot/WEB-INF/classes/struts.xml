@@ -6,16 +6,11 @@
 
 <struts>
 
-<!-- 配置struts2属性 -->
-<!-- 乱码解决 -->
-<constant name = "struts.i18n.encoding" value = "UTF-8"/>
-<!-- 自定义扩展名
-<constant name = "struts.action.extension" value="action,,qimh"></constant>-->
-<!-- 设置开发模式-->
-<!-- <constant name = "struts.devMode" value="true"></constant> -->
-<!-- 自动加载-->
-<constant name = "struts.configuration.xml.reload" value="true"></constant>
-   <!-- extends 必须写，直接或者间接继承struts-default name自定义 -->
+<!-- 打开动态方法调用开关，默认是false -->
+<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+
+<constant name="struts.action.extension" value="action,,qimh"></constant>
+
 <package name="user" extends="struts-default">
       <!-- name是请求名称，不要写/ ;class对应action完全限定名=包名+类名 -->
       <action name="testActionContextAction"  class="com.qimh.action.TestActionContextAction">
@@ -25,6 +20,10 @@
       
       <action name="testAwareAction"  class="com.qimh.action.TestAwareAction">
 	      <result name = "success">/test-aware.jsp</result>
+      </action>
+      
+       <action name="testDynamicMethodInvocation"  class="com.qimh.action.TestDynamicMethodInvocationAction" method = "save">
+	      <result name = "success">/success.jsp</result>
       </action>
 </package>
 
