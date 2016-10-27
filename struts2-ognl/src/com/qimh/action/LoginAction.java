@@ -1,9 +1,15 @@
 package com.qimh.action;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.ApplicationAware;
+import org.apache.struts2.interceptor.RequestAware;
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.util.ValueStack;
 
-public class LoginAction {
+public class LoginAction implements RequestAware,SessionAware,ApplicationAware{
 	
 	private String username ;
 	private String pwd ;
@@ -27,6 +33,9 @@ public class LoginAction {
 		//3.把Test 对象压入到值栈的栈顶
 		valueStack.push(test);
 		
+		
+		sessionMap.put("loginaction", this);
+		requestMap.put("test", test);
 		
 		return "success";
 	}
@@ -53,6 +62,24 @@ public class LoginAction {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	private Map<String, Object> applicationMap;
+	public void setApplication(Map<String, Object> application) {
+		// TODO Auto-generated method stub
+		this.applicationMap = application;
+	}
+
+	private Map<String, Object> sessionMap;
+	public void setSession(Map<String, Object> session) {
+		// TODO Auto-generated method stub
+		this.sessionMap = session;
+	}
+
+	private Map<String, Object> requestMap;
+	public void setRequest(Map<String, Object> request) {
+		// TODO Auto-generated method stub
+		this.requestMap = request;
 	}
 
 	

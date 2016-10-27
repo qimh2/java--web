@@ -28,7 +28,7 @@ OGNL---->Objec-Graph Navigation Language ---对象-导航图语言
 	
 		>对于对象栈：对象栈中某一个对象的属性值
 		
-		>Map 栈：requestMap ，sessionMap ，applicationMap 的一个属性值或一个请求的参数。
+		>Map 栈：request ，session ，application 的一个属性值或一个请求的参数。
 		
 	2). 读取对象栈中的对象的属性	
 	

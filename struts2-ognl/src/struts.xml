@@ -5,6 +5,11 @@
     
 <struts>
 
+<!-- 打开静态方法的调用限制 -->
+<constant name = "struts.ognl.allowStaticMethodAccess" value = "true"></constant>
+
+
+
 <package  name="user" namespace="/" extends="struts-default">
       <action name="login"  class="com.qimh.action.LoginAction" method = "login">
 	      <result name = "success">/success.jsp</result>
